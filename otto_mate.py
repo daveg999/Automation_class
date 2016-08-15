@@ -1,2 +1,0 @@
-print "otto mate me"
-

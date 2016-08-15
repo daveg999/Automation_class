@@ -1,0 +1,16 @@
+- 0
+- 1
+- 2
+- 3
+- 4
+- string1
+- string2
+- critter1: hedgehog
+  critter2: bunny
+  dungeon_levels:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+- yaml_list_end
