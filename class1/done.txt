@@ -1,0 +1,7 @@
+i think i have Github mostly figured out
+ex6 and ex7 done
+ex8 using ciscoconfparse was cool - why do we use "from ciscoconfparse import CiscoConfParse" instead of just importing CiscoConfParse"
+ex9 - i knew it was a nested for loop but i had to look at the solution to get the correct text
+ex10 - i didn't understand that the "parent wo child" means parent wo the expression in the childspec - i thought it was a parent line with no child line :-)
+  glad I was playing with the w_child and wo_child and stumbled across that!
+On to Week 2!
