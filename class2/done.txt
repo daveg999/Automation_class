@@ -1,0 +1,3 @@
+SNMP exercise done. I tried to make it a class, but in the end was easier to just write the code.
+I did make a list of IP addresses iterate through a loop, so I'm happy with that.
+To Week 3!
