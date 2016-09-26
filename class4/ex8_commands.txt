@@ -1,0 +1,11 @@
+! sho current config settings
+do sho run | i logg
+
+! change config settings
+logg buff 99999
+no logg console
+
+! sho new config
+do sho run | i logg
+
+! end script for this device
