@@ -1,0 +1,24 @@
+Exercise Notes:
+
+Ex1a:	built code on my own using lecture material
+
+Ex1b:	went to the "more information on Paramiko" section 
+	and saw a script built with functions and reworked 
+	ex1a because I know I'm supposed to be using functions 
+	and not just a big block of code
+
+Ex2:	changed the "logg buff" value and printed result, but did not save the config
+	Not sure where is best place to actually save config after automated changes...
+
+
+Ex3:	seeing lots of extra characters on the command responses - have to figure out how to clean that up
+
+Ex4:	tried to change expect to ('(config)#') but pexpect didn't like that
+        had to change back to just ('#') to get commands to work
+
+
+Ex5:	netmiko has much cleaner responses
+
+Ex8:	text file list of commands - next is to do a text file input of devices...
+
+Ex9:	going to have to wait on this one - need to get to next class
