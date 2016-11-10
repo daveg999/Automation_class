@@ -1,0 +1,15 @@
+---
+- hosts: local
+
+  tasks:
+    - name: Generate configuration file
+
+      template: src=ex1_access-switch.j2
+                  dest=/home/dgrice/automation_class/class5/ex1_{{item.hostname}}.txt
+
+      with_items:
+        - { hostname: pynet-sw2, ip_addr: 2.2.2.2, default_gateway: 2.2.2.1, access_vlan: 2, snmp_community: galileo, secret: "hello kitty" }
+        - { hostname: pynet-sw3, ip_addr: 3.3.3.3, default_gateway: 3.3.3.1, access_vlan: 3, snmp_community: galileo, secret: "hello kitty" }
+        - { hostname: pynet-sw4, ip_addr: 4.4.4.4, default_gateway: 4.4.4.1, access_vlan: 4, snmp_community: galileo, secret: "hello kitty" }
+        - { hostname: pynet-sw5, ip_addr: 5.5.5.5, default_gateway: 5.5.5.1, access_vlan: 5, snmp_community: galileo, secret: "hello kitty" }
+        - { hostname: pynet-sw6, ip_addr: 6.6.6.6, default_gateway: 6.6.6.1, access_vlan: 6, snmp_community: galileo, secret: "hello kitty" }
