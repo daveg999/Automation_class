@@ -1,0 +1,6 @@
+---
+- name: create config files
+  hosts: local
+
+  roles:
+    - switch
