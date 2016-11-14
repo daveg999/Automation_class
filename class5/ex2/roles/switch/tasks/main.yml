@@ -1,0 +1,7 @@
+---
+- name: create config files
+
+  template: src=switch.j2
+              dest=/home/dgrice/automation_class/class5/ex2/ex2_{{item.hostname}}.txt
+
+  with_items: switches
