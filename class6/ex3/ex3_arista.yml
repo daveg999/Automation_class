@@ -1,0 +1,22 @@
+---
+
+- name: configure interface on Arista switch
+  hosts: arista
+
+  tasks:
+    - name: set trunk on int eth6
+      eos_interface: name=Ethernet6 description=""
+        username={{ eapi_username }}
+        password={{ eapi_password }}
+        host={{ eapi_hostname }}
+        port={{ eapi_port }}
+        transport=https
+
+    - name: configure interface as a trunk
+      eos_switchport: name=Ethernet6 mode=trunk trunk_allowed_vlans=755,766,777
+        username={{ eapi_username }}
+        password={{ eapi_password }}
+        host={{ eapi_hostname }}
+        port={{ eapi_port }}
+        transport=https
+

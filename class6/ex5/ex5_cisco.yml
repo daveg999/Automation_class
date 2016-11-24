@@ -1,0 +1,17 @@
+---
+
+- name: Cisco file copy
+  hosts: cisco
+
+  tasks:
+    - name: test SCP image copy
+      cisco_file_transfer:
+        source_file="/home/dgrice/ANSIBLE/ex5_cisco_logging.txt"
+        dest_file=ex5_logging_results.txt
+        overwrite=true
+        enable_scp=true
+        host={{ host }}
+        port={{ port }}
+        username={{ username }}
+        password={{ password }}
+

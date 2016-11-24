@@ -1,0 +1,32 @@
+---
+
+- name: create vlans on Arista gear
+  hosts: arista
+
+  tasks:
+    - name: create daveg_vlan755
+      eos_vlan: name=daveg_vlan755 vlanid=755
+        username={{ eapi_username }}
+        password={{ eapi_password }}
+        host={{ eapi_hostname }}
+        port={{ eapi_port }}
+        transport=https
+
+    - name: create daveg_vlan766
+      eos_vlan: name=daveg_vlan766 vlanid=766
+        username={{ eapi_username }}
+        password={{ eapi_password }}
+        host={{ eapi_hostname }}
+        port={{ eapi_port }}
+        transport=https
+
+    - name: create daveg_vlan777
+      eos_vlan: name=daveg_vlan777 vlanid=777
+        username={{ eapi_username }}
+        password={{ eapi_password }}
+        host={{ eapi_hostname }}
+        port={{ eapi_port }}
+        transport=https
+
+
+
