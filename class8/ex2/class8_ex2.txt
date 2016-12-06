@@ -1,0 +1,58 @@
+(applied_python)[dgrice@ip-172-30-0-4 djproject]$ python manage.py shell
+Python 2.7.12 (default, Sep  1 2016, 22:14:00)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from net_system.models import NetworkDevice, Credentials
+>>> net_devices = NetworkDevice.objects.all()
+>>>
+>>> vendor_c = "Cisco"
+>>> vendor_a = "Arista"
+>>> vendor_j = "Juniper"
+>>>
+>>> for a_device in net_devices:
+...     if 'pynet-sw' in a_device.device_name:
+...         a_device.vendor = vendor_a
+...     elif 'pynet-rtr' in a_device.device_name:
+...         a_device.vendor = vendor_c
+...     else:
+...         a_device.vendor = vendor_j
+...     a_device.save()
+...
+>>>
+>>> for a_device in net_devices:
+...     print a_device, a_device.vendor, a_device.credentials
+...
+pynet-rtr1 Cisco pyclass
+pynet-rtr2 Cisco pyclass
+pynet-sw1 Arista admin1
+pynet-sw2 Arista admin1
+pynet-sw3 Arista admin1
+pynet-sw4 Arista admin1
+juniper-srx Juniper pyclass
+>>>
+>>>
+>>>
+(applied_python)[dgrice@ip-172-30-0-4 djproject]$
+(applied_python)[dgrice@ip-172-30-0-4 djproject]$
+(applied_python)[dgrice@ip-172-30-0-4 djproject]$ python manage.py shell
+Python 2.7.12 (default, Sep  1 2016, 22:14:00)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from net_system.models import NetworkDevice, Credentials
+>>> net_devices = NetworkDevice.objects.all()
+>>>
+>>>
+>>> for a_device in net_devices:
+...     print a_device, a_device.vendor, a_device.credentials
+...
+pynet-rtr1 Cisco pyclass
+pynet-rtr2 Cisco pyclass
+pynet-sw1 Arista admin1
+pynet-sw2 Arista admin1
+pynet-sw3 Arista admin1
+pynet-sw4 Arista admin1
+juniper-srx Juniper pyclass
+>>>
+
