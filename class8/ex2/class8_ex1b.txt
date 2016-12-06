@@ -1,0 +1,52 @@
+>>> from net_system.models import NetworkDevice, Credentials
+>>> net_devices = NetworkDevice.objects.all()
+>>> creds = Credentials.objects.all()
+>>>
+>>>
+>>>
+>>> net_devices
+[<NetworkDevice: pynet-rtr1>, <NetworkDevice: pynet-rtr2>, <NetworkDevice: pynet-sw1>, 
+<NetworkDevice: pynet-sw2>, <NetworkDevice: pynet-sw3>, <NetworkDevice: pynet-sw4>, 
+<NetworkDevice: juniper-srx>]
+>>>
+>>>
+>>> creds
+[<Credentials: pyclass>, <Credentials: admin1>]
+>>>
+>>>
+>>> for a_device in net_devices:
+...     print a_device.device_name
+...
+pynet-rtr1
+pynet-rtr2
+pynet-sw1
+pynet-sw2
+pynet-sw3
+pynet-sw4
+juniper-srx
+>>>
+>>>
+>>>
+>>> std_creds = creds[0]
+>>> arista_creds = creds[1]
+>>>
+>>> for a_device in net_devices:
+...     if 'pynet-sw' in a_device.device_name:
+...         a_device.credentials = arista_creds
+...     else:
+...         a_device.credentials = std_creds
+...     a_device.save()
+...
+>>>
+>>>
+>>> for a_device in net_devices:
+...     print a_device, a_device.credentials
+...
+pynet-rtr1 pyclass
+pynet-rtr2 pyclass
+pynet-sw1 admin1
+pynet-sw2 admin1
+pynet-sw3 admin1
+pynet-sw4 admin1
+juniper-srx pyclass
+>>>
