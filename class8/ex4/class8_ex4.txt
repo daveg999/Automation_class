@@ -1,0 +1,39 @@
+**************************************
+delete the added devices
+**************************************
+>>> pynet_rtr007.delete()
+>>>
+>>>
+>>> for a_device in net_devices:
+...     print a_device, a_device.vendor, a_device.model
+...
+pynet-rtr1 None None
+pynet-rtr2 Cisco None
+pynet-sw1 Arista None
+pynet-sw2 Arista None
+pynet-sw3 Arista None
+pynet-sw4 Arista None
+juniper-srx Juniper None
+None None None
+pynet-sw007 None None
+>>> pynet_sw007 = net_devices[8]
+>>> pynet_sw007.delete()
+>>>
+**************************************
+verify deletion of the added devices
+**************************************
+>>> for a_device in net_devices:
+...     print a_device, a_device.vendor, a_device.model
+...
+pynet-rtr1 None None
+pynet-rtr2 Cisco None
+pynet-sw1 Arista None
+pynet-sw2 Arista None
+pynet-sw3 Arista None
+pynet-sw4 Arista None
+juniper-srx Juniper None
+None None None
+None None None
+>>>
+
+ 

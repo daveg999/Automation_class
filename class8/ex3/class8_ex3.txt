@@ -1,0 +1,46 @@
+**************************************
+run updated load_devices.py
+**************************************
+(applied_python)[dgrice@ip-172-30-0-4 net_system]$ python load_devices.py
+(<NetworkDevice: pynet-rtr2>, False)
+(<NetworkDevice: pynet-sw1>, False)
+(<NetworkDevice: pynet-sw2>, False)
+(<NetworkDevice: pynet-sw3>, False)
+(<NetworkDevice: pynet-sw4>, False)
+(<NetworkDevice: juniper-srx>, False)
+(<NetworkDevice: pynet-sw007>, True)
+(applied_python)[dgrice@ip-172-30-0-4 net_system]$
+
+**************************************
+print rows in database with new devices
+**************************************
+>>> for a_device in net_devices:
+...     print a_device, a_device.vendor, a_device.credentials
+...
+pynet-rtr1 None None
+pynet-rtr2 Cisco pyclass
+pynet-sw1 Arista admin1
+pynet-sw2 Arista admin1
+pynet-sw3 Arista admin1
+pynet-sw4 Arista admin1
+juniper-srx Juniper pyclass
+pynet-rtr007 None None
+pynet-sw007 None None
+>>>
+
+**************************************
+delete the added devices
+**************************************
+>>> for a_device in net_devices:
+...     print a_device, a_device.vendor, a_device.model
+...
+pynet-rtr1 None None
+pynet-rtr2 Cisco None
+pynet-sw1 Arista None
+pynet-sw2 Arista None
+pynet-sw3 Arista None
+pynet-sw4 Arista None
+juniper-srx Juniper None
+None None None
+None None None
+>>>
