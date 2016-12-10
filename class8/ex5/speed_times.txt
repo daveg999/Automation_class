@@ -1,0 +1,4 @@
+ran test script 10 times.
+
+Average time to completion was 42 sec.
+

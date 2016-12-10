@@ -1,0 +1,12 @@
+tested speeds using processes
+runs:     5
+avg time: 8.8sec
+
+tested speeds using serial 
+runs:     10
+avg time: 42sec
+
+Processes are faster than serial by 33.2sec
+
+but seem to be slower than threads...
+

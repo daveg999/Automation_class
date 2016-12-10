@@ -1,0 +1,10 @@
+tested speeds using threads
+runs:     5
+avg time: 8.5sec
+
+tested speeds using serial 
+runs:     10
+avg time: 42sec
+
+Threads are faster than serial by 33.5sec
+
