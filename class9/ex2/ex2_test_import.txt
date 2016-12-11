@@ -1,0 +1,45 @@
+>>>
+>>> import mytest
+>>>
+>>>
+>>> mytest.func1()
+you are calling func1 from simple module
+>>>
+>>>
+>>>
+>>> mytest.func2()
+you are calling func2 from whatever module
+>>>
+>>>
+>>>
+>>> mytest.func3()
+you are calling func3 from world module
+>>>
+>>>
+>>>
+>>>
+(applied_python)[dgrice@ip-172-30-0-4 ex2]$
+(applied_python)[dgrice@ip-172-30-0-4 ex2]$
+(applied_python)[dgrice@ip-172-30-0-4 ex2]$
+(applied_python)[dgrice@ip-172-30-0-4 ex2]$ python
+Python 2.7.12 (default, Sep  1 2016, 22:14:00)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>>
+>>>
+>>>
+>>>
+>>> from mytest import func1
+>>> from mytest import func2
+>>> from mytest import func3
+>>>
+>>>
+>>> func1()
+you are calling func1 from simple module
+>>> func2()
+you are calling func2 from whatever module
+>>> func3()
+you are calling func3 from world module
+>>>
+>>>
+>>>
