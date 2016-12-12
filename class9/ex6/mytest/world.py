@@ -20,8 +20,12 @@ class MyClass(object):
 
 class MyChildClass(MyClass):
 
+    def __init__(self, why, who, what, when):
+        self.why = why
+        super(MyChildClass, self).__init__(who, what, when)
+
     def hello(self):
-        print "i want {} to bring {} for my brother at {}".format(self.who, self.what, self.when)
+        print "i want {} to bring {} for my brother at {} because he's in {}".format(self.who, self.what, self.when, self.why)
 
 
 
@@ -43,7 +47,7 @@ if __name__ == "__main__":
     print
     my_xmas.not_hello()
     print
-    my_bros_xmas = MyChildClass("Santa Claus", "lumps of coal", "Christmas")
+    my_bros_xmas = MyChildClass("Hawaii", "Santa Claus", "lumps of coal", "Christmas")
     print
     my_bros_xmas.hello()
     print
