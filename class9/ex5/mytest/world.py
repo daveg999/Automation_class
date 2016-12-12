@@ -46,4 +46,5 @@ if __name__ == "__main__":
     print
     my_bros_xmas.hello()
     print
-
+    my_bros_xmas.not_hello()
+    print
