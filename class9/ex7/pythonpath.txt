@@ -1,0 +1,28 @@
+(applied_python)[dgrice@ip-172-30-0-4 ex7]$ PYTHONPATH=/home/dgrice/automation_class/class6/mytest/
+(applied_python)[dgrice@ip-172-30-0-4 ex7]$
+(applied_python)[dgrice@ip-172-30-0-4 ex7]$
+(applied_python)[dgrice@ip-172-30-0-4 ex7]$ env | grep PY
+PYTHONPATH=/home/dgrice/automation_class/class6/mytest/
+(applied_python)[dgrice@ip-172-30-0-4 ex7]$
+(applied_python)[dgrice@ip-172-30-0-4 ex7]$
+(applied_python)[dgrice@ip-172-30-0-4 ex7]$ python
+Python 2.7.12 (default, Sep  1 2016, 22:14:00)
+[GCC 4.8.3 20140911 (Red Hat 4.8.3-9)] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> from pprint import pprint
+>>>
+>>> pprint(sys.path)
+['',
+ '/home/dgrice/automation_class/class6/mytest',
+ '/home/dgrice/applied_python/local/lib64/python2.7/site-packages',
+ '/home/dgrice/applied_python/local/lib/python2.7/site-packages',
+ '/home/dgrice/applied_python/lib64/python2.7',
+ '/home/dgrice/applied_python/lib/python2.7',
+ '/home/dgrice/applied_python/lib64/python2.7/site-packages',
+ '/home/dgrice/applied_python/lib/python2.7/site-packages',
+ '/home/dgrice/applied_python/lib64/python2.7/lib-dynload',
+ '/usr/lib64/python2.7',
+ '/usr/lib/python2.7']
+>>>
+
