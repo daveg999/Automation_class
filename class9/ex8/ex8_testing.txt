@@ -1,0 +1,22 @@
+>>>
+>>> from mytest import *
+>>>
+>>> dir()
+['MyClass', '__builtins__', '__doc__', '__name__', '__package__', 'func1', 'func2', 'func3', 'my_test']
+>>>
+>>> func1()
+you are calling func1 from simple module
+>>>
+>>> func2()
+you are calling func2 from whatever module
+>>>
+>>> func3()
+you are calling func3 from world module
+>>>
+>>> my_test = MyClass('Santa', 'coal', 'Christmas')
+>>>
+>>> my_test.hello()
+if you are good, Santa will bring presents instead of coal for Christmas
+>>>
+>>>
+>>>
